@@ -1,0 +1,260 @@
+/* Camping Trip Theme Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fafbfc;
+  color: #181818;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.navbar {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #181818;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #0070f3;
+}
+
+.main-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 2.5rem auto 0 auto;
+  padding: 0 1rem;
+  min-width: 0;
+}
+.day-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 2.5rem;
+  min-width: 60px;
+  padding-top: 1.5rem;
+}
+.day-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #bdbdbd;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+.content-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  min-width: 0;
+}
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 2.5rem 2.5rem 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+.card-meta {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 0.7rem;
+}
+.card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.2;
+  word-break: break-word;
+}
+.card-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  margin: 0.5rem 0 1.2rem 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  object-fit: cover;
+  align-self: flex-start;
+  display: block;
+}
+.card-details {
+  font-size: 1.08rem;
+  margin-bottom: 1.2rem;
+  word-break: break-word;
+}
+.card-details ul {
+  margin: 0 0 0 1.2rem;
+  padding: 0;
+}
+.card-details li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+.card-details a {
+  color: #0070f3;
+  text-decoration: underline;
+}
+.card-details a:hover {
+  color: #0051a3;
+}
+.card-summary {
+  position: absolute;
+  right: 2.5rem;
+  top: 2.5rem;
+  width: 220px;
+  background: none;
+  color: #222;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  border-left: 2px solid #eaeaea;
+  padding-left: 1.2rem;
+  min-width: 0;
+  word-break: break-word;
+}
+.summary-title {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+  display: block;
+  text-decoration: underline;
+}
+.notes-card .card-summary {
+  top: unset;
+  bottom: 2.5rem;
+}
+
+@media (max-width: 1100px) {
+  .main-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .day-numbers {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 2rem 0;
+    min-width: unset;
+    padding-top: 0;
+    gap: 2rem;
+  }
+  .day-number {
+    margin: 0 1.5rem 0 0;
+    font-size: 1.2rem;
+  }
+  .content-cards {
+    gap: 2rem;
+  }
+  .card-summary {
+    position: static;
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid #eaeaea;
+    padding-left: 0;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem 1rem 1rem;
+    gap: 0.5rem;
+  }
+  .main-layout {
+    padding: 0 0.2rem;
+  }
+  .day-numbers {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    gap: 1rem;
+  }
+  .day-number {
+    margin: 0 0.7rem 0 0;
+    font-size: 1rem;
+  }
+  .content-cards {
+    gap: 1.2rem;
+  }
+  .card {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    border-radius: 12px;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .card-image {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .card-summary {
+    font-size: 0.98rem;
+    padding-top: 0.7rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eaeaea;
+    border-left: none;
+    right: 0;
+    left: 0;
+    top: unset;
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  }
+  .card {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-summary {
+    font-size: 0.95rem;
+    padding-top: 0.5rem;
+    margin-top: 0.7rem;
+  }
+}
+
+/* For future JS enhancements, add styles here */ 
