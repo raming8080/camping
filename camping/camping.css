@@ -17,7 +17,7 @@ body {
   background: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1.5rem 3rem 1.5rem 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   position: sticky;
@@ -28,6 +28,12 @@ body {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 1px;
+}
+.navbar-menu-group {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 2.5rem;
 }
 .nav-links {
   display: flex;
@@ -96,15 +102,24 @@ body {
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
   padding: 2.5rem 2rem 2.5rem 2rem;
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 2.5rem;
   position: relative;
   min-width: 0;
   overflow: hidden;
   max-width: 1400px;
   margin: 0 auto 2.5rem auto;
   align-items: start;
+}
+.content-cards > .card {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 520px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2.5rem;
+  align-items: start;
+  overflow: hidden;
 }
 .card:first-of-type {
   min-height: unset;
@@ -135,6 +150,8 @@ body {
 }
 .card-image {
   max-width: 100%;
+  max-height: 260px;
+  width: 100%;
   height: auto;
   object-fit: cover;
   margin-bottom: 2rem;
@@ -344,6 +361,55 @@ body {
   line-height: 1.6;
   font-weight: 500;
 }
+.floating-info-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0 0;
+}
+.floating-info-content ul li {
+  margin-bottom: 0.7rem;
+  padding-left: 0;
+}
+.floating-info-content ul li:last-child {
+  margin-bottom: 0;
+}
+.floating-info-content a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.04rem;
+  border-radius: 6px;
+  padding: 0.15em 0.3em;
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+}
+.floating-info-content a:hover {
+  background: #f0f7ff;
+  color: #0051a3;
+  text-decoration: underline;
+}
+.floating-info-content p {
+  margin: 0 0 1.2rem 0;
+  padding: 0.7rem 1rem;
+  background: #f7fafd;
+  border-radius: 8px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.floating-info-content p span.label {
+  display: inline-block;
+  font-weight: 600;
+  color: #0070f3;
+  margin-right: 0.3em;
+}
+.floating-info-content p span.phone {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  color: #333;
+  margin-left: 0.2em;
+}
 @media (max-width: 900px) {
   .floating-info {
     position: static;
@@ -429,4 +495,118 @@ body {
 .day-link:hover .weekday-date {
   text-decoration: underline;
   color: #0070f3;
-} 
+}
+
+/* Dark mode toggle styles */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  gap: 0.7rem;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e4e7eb;
+  border-radius: 34px;
+  transition: background 0.2s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+input:checked + .slider {
+  background-color: #1976ff;
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+.dark-mode-label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #222;
+}
+body.dark-mode {
+  background: #18191a;
+  color: #f3f3f3;
+}
+body.dark-mode .navbar {
+  background: #232526;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+body.dark-mode .nav-links a {
+  color: #f3f3f3;
+}
+body.dark-mode .nav-links a:hover {
+  color: #90caf9;
+}
+body.dark-mode .dark-mode-label {
+  color: #f3f3f3;
+}
+body.dark-mode .card,
+body.dark-mode .floating-info {
+  background: #232526;
+  color: #f3f3f3;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+body.dark-mode .card-meta {
+  color: #b0b0b0;
+}
+body.dark-mode .card-title {
+  color: #fff;
+}
+body.dark-mode .card-details a,
+body.dark-mode .floating-info-content a {
+  color: #90caf9;
+}
+body.dark-mode .card-details a:hover,
+body.dark-mode .floating-info-content a:hover {
+  color: #1976ff;
+  background: #232526;
+}
+body.dark-mode .floating-info-content p {
+  background: #232526;
+  color: #f3f3f3;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+body.dark-mode .floating-info-content p span.label {
+  color: #90caf9;
+}
+body.dark-mode .floating-info-content p span.phone {
+  color: #e3e3e3;
+}
+
+<div class="important-info">
+  <p>3415 Hot Springs Road<br>
+  Markleville, CA 96120<br>
+  (530) 694-2248 Entrance/Camping<br>
+  (530) 694-2249 Pools</p>
+  <ul>
+    <li><a href="https://www.parks.ca.gov/?page_id=508" target="_blank">Grover Hot Springs State Park</a></li>
+    <li><a href="https://www.parks.ca.gov/pages/508/files/GroverHotSpringsSPWebLayout2015.pdf" target="_blank">Grover Hot Springs State Park Brochure</a></li>
+    <li><a href="https://www.parks.ca.gov/pages/508/files/GroverHotSpringsSPlWebLayout2015.pdf" target="_blank">Grover Hot Springs Brochure - Spanish</a></li>
+    <li><a href="https://www.parks.ca.gov/pages/508/files/cablackbear_web_2010.pdf" target="_blank">Black Bear Brochure</a></li>
+  </ul>
+</div> 

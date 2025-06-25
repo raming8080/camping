@@ -38,4 +38,25 @@ if (mapLink && mapModal && closeMapModal) {
   document.querySelectorAll('.map-popup-link').forEach(function(link) {
     link.addEventListener('click', openMapModal);
   });
+}
+
+// Dark mode toggle logic
+const darkModeSwitch = document.getElementById('darkModeSwitch');
+const body = document.body;
+
+// Load preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+  body.classList.add('dark-mode');
+  if (darkModeSwitch) darkModeSwitch.checked = true;
+}
+if (darkModeSwitch) {
+  darkModeSwitch.addEventListener('change', function() {
+    if (this.checked) {
+      body.classList.add('dark-mode');
+      localStorage.setItem('darkMode', 'enabled');
+    } else {
+      body.classList.remove('dark-mode');
+      localStorage.setItem('darkMode', 'disabled');
+    }
+  });
 } 

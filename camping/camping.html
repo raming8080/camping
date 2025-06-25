@@ -10,12 +10,21 @@
 <body>
   <nav class="navbar">
     <div class="nav-logo"><img src="images/logo.jpg" alt="Grover Hot Springs Logo" style="height: 100px; vertical-align: middle;"></div>
-    <ul class="nav-links">
-      <li><a href="#">Info</a></li>
-      <li><a href="#">Schedule</a></li>
-      <li><a href="#" id="mapLink">Map</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+    <div class="navbar-menu-group">
+      <ul class="nav-links">
+        <li><a href="#">Info</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#" id="mapLink">Map</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div id="darkModeToggle" class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="darkModeSwitch">
+          <span class="slider"></span>
+        </label>
+        <span class="dark-mode-label">Dark Mode</span>
+      </div>
+    </div>
   </nav>
   <!-- Map Modal -->
   <div class="modal" id="mapModal" style="display:none;">
@@ -37,19 +46,19 @@
         <div class="card-meta">2025/07/24 &bull; Camp Setup</div>
         <h2 class="card-title">Camp Setup</h2>
         <img src="images/image1.png" alt="Grover Hot Springs" class="card-image">
-        <div class="card-details">
-          <ul>
-            <li>
-              Hot Springs Campground
-              <ul>
-                <li>There are 2 campsite loops. Our Sites are located in the loop (<a href="#" class="map-popup-link" data-popup="map">sites 37-76</a>).</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
         <div class="card-summary">
           <span class="summary-title">Summary</span>
           <p>Arrive at the campground, set up your site, and get settled in for the adventure!</p>
+          <div class="card-details">
+            <ul>
+              <li>
+                Hot Springs Campground
+                <ul>
+                  <li>There are 2 campsite loops. Our Sites are located in the loop (<a href="#" class="map-popup-link" data-popup="map">sites 37-76</a>).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- Day 2 Card -->
@@ -57,15 +66,15 @@
         <div class="card-meta">2025/07/25 &bull; Burnside Lake & Meet and Greet</div>
         <h2 class="card-title">Burnside Lake Hike & Evening Meet and Greet</h2>
         <img src="images/image1.png" alt="Burnside Lake" class="card-image">
-        <div class="card-details">
-          <ul>
-            <li><a href="https://www.google.com/maps/dir/Grover+Hot+Springs+State+Park,+Hot+Springs+Road,+Markleeville,+CA/Burnside+Lake,+California/@38.7338672,-119.9366424,24419m/am=t/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x8099e88b8a7aa4cb:0xf675bd35235f6c8a!2m2!1d-119.8411659!2d38.6982556!1m5!1m1!1s0x8099eed0e25bf059:0xc70a1a77260b5248!2m2!1d-119.8905595!2d38.712673!3e0?entry=ttu" target="_blank">Burnside Lake</a> - 5.5 mile hike from the park trailhead or 1.5 miles to the waterfalls. Early departure recommended.</li>
-            <li>Meet & Greet - site and time TBD. Bring your chairs, an appetizer to share, and your drink of choice.</li>
-          </ul>
-        </div>
         <div class="card-summary">
           <span class="summary-title">Summary</span>
           <p>Enjoy a scenic hike and meet fellow campers in the evening for snacks and drinks.</p>
+          <div class="card-details">
+            <ul>
+              <li><a href="https://www.google.com/maps/dir/Grover+Hot+Springs+State+Park,+Hot+Springs+Road,+Markleeville,+CA/Burnside+Lake,+California/@38.7338672,-119.9366424,24419m/am=t/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x8099e88b8a7aa4cb:0xf675bd35235f6c8a!2m2!1d-119.8411659!2d38.6982556!1m5!1m1!1s0x8099eed0e25bf059:0xc70a1a77260b5248!2m2!1d-119.8905595!2d38.712673!3e0?entry=ttu" target="_blank">Burnside Lake</a> - 5.5 mile hike from the park trailhead or 1.5 miles to the waterfalls. Early departure recommended.</li>
+              <li>Meet & Greet - site and time TBD. Bring your chairs, an appetizer to share, and your drink of choice.</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- Day 3 Card -->
@@ -73,16 +82,16 @@
         <div class="card-meta">2025/07/26 &bull; Explore & Pools</div>
         <h2 class="card-title">Explore the Park, Pools, Markleville</h2>
         <img src="images/image1.png" alt="Park Activities" class="card-image">
-        <div class="card-details">
-          <ul>
-            <li>Guided Hikes and Junior Rangers Program events. Check with the visitor center for event details.</li>
-            <li><a href="https://www.reservecalifornia.com/Web/Activities/ProgramsAndTours.aspx" target="_blank">Hotspring Pool Sessions</a> are limited, please plan accordingly.</li>
-            <li>If Hot Springs aren't your thing, visit Markleville's Stonefly or Cutthroat Tavern for good eats and drinks.</li>
-          </ul>
-        </div>
         <div class="card-summary">
           <span class="summary-title">Summary</span>
           <p>Participate in park activities, swim in the pools, or explore the local town for food and fun.</p>
+          <div class="card-details">
+            <ul>
+              <li>Guided Hikes and Junior Rangers Program events. Check with the visitor center for event details.</li>
+              <li><a href="https://www.reservecalifornia.com/Web/Activities/ProgramsAndTours.aspx" target="_blank">Hotspring Pool Sessions</a> are limited, please plan accordingly.</li>
+              <li>If Hot Springs aren't your thing, visit Markleville's Stonefly or Cutthroat Tavern for good eats and drinks.</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- Day 4 Card -->
@@ -90,15 +99,15 @@
         <div class="card-meta">2025/07/27 &bull; Camp Take Down</div>
         <h2 class="card-title">Camp Take Down & Departure</h2>
         <img src="images/image1.png" alt="Camp Take Down" class="card-image">
-        <div class="card-details">
-          <ul>
-            <li>Remember to pack out what you packed in.</li>
-            <li>Check out time is 12pm.</li>
-          </ul>
-        </div>
         <div class="card-summary">
           <span class="summary-title">Summary</span>
           <p>Pack up your site, check out, and say goodbye to Grover Hot Springs until next time!</p>
+          <div class="card-details">
+            <ul>
+              <li>Remember to pack out what you packed in.</li>
+              <li>Check out time is 12pm.</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- Notes Card -->
@@ -126,10 +135,18 @@
     </main>
     <div class="floating-info">
       <div class="floating-info-content">
-        <p>3415 Hot Springs Road<br>
-        Markleville, CA 96120<br>
-        (530) 694-2248 Entrance/Camping<br>
-        (530) 694-2249 Pools</p>
+        <p>
+          3415 Hot Springs Road<br>
+          Markleville, CA 96120<br>
+          <span class="label">Entrance/Camping</span><span class="phone">(530) 694-2248</span><br>
+          <span class="label">Pools</span><span class="phone">(530) 694-2249</span>
+        </p>
+        <ul>
+          <li><a href="https://www.parks.ca.gov/?page_id=508" target="_blank">Grover Hot Springs State Park</a></li>
+          <li><a href="https://www.parks.ca.gov/pages/508/files/GroverHotSpringsSPWebLayout2015.pdf" target="_blank">Grover Hot Springs State Park Brochure</a></li>
+          <li><a href="https://www.parks.ca.gov/pages/508/files/GroverHotSpringsSPlWebLayout2015.pdf" target="_blank">Grover Hot Springs Brochure - Spanish</a></li>
+          <li><a href="https://www.parks.ca.gov/pages/508/files/cablackbear_web_2010.pdf" target="_blank">Black Bear Brochure</a></li>
+        </ul>
       </div>
     </div>
   </div>
