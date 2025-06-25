@@ -311,6 +311,19 @@ body {
     display: block;
     margin-left: 0;
   }
+  .right-sidebar {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0 0 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .right-sidebar .floating-info,
+  .right-sidebar .notes-card {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 95vw;
+  }
 }
 
 @media (max-width: 700px) {
@@ -639,15 +652,16 @@ body.dark-mode .floating-info-content p span.phone {
   color: #e3e3e3;
 }
 
-<div class="important-info">
-  <p>3415 Hot Springs Road<br>
-  Markleville, CA 96120<br>
-  (530) 694-2248 Entrance/Camping<br>
-  (530) 694-2249 Pools</p>
-  <ul>
-    <li><a href="https://www.parks.ca.gov/?page_id=508" target="_blank">Grover Hot Springs State Park</a></li>
-    <li><a href="https://www.parks.ca.gov/pages/508/files/GroverHotSpringsSPWebLayout2015.pdf" target="_blank">Grover Hot Springs State Park Brochure</a></li>
-    <li><a href="https://www.parks.ca.gov/pages/508/files/GroverHotSpringsSPlWebLayout2015.pdf" target="_blank">Grover Hot Springs Brochure - Spanish</a></li>
-    <li><a href="https://www.parks.ca.gov/pages/508/files/cablackbear_web_2010.pdf" target="_blank">Black Bear Brochure</a></li>
-  </ul>
-</div> 
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  grid-column: 3;
+}
+.right-sidebar .floating-info,
+.right-sidebar .notes-card {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: 100%;
+} 
