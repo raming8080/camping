@@ -58,7 +58,7 @@ body {
   align-items: start;
 }
 .main-layout > aside {
-  padding-left: 20px;
+  padding-left: 0;
 }
 .day-numbers {
   display: flex;
@@ -67,6 +67,10 @@ body {
   margin-right: 0;
   min-width: 120px;
   padding-top: 1.5rem;
+  position: sticky;
+  top: 5.5rem;
+  z-index: 10;
+  background: transparent;
 }
 .day-number {
   margin-bottom: 2.5rem;
