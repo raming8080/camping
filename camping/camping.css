@@ -57,6 +57,9 @@ body {
   min-width: 0;
   align-items: start;
 }
+.main-layout > aside {
+  padding-left: 20px;
+}
 .day-numbers {
   display: flex;
   flex-direction: column;
@@ -410,5 +413,16 @@ body {
   transition: color 0.2s;
 }
 .close:hover {
+  color: #0070f3;
+}
+
+.day-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.day-link:hover .weekday-date {
+  text-decoration: underline;
   color: #0070f3;
 } 
