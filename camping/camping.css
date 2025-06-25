@@ -68,7 +68,7 @@ body {
   min-width: 120px;
   padding-top: 1.5rem;
   position: sticky;
-  top: 5.5rem;
+  top: 160px;
   z-index: 10;
   background: transparent;
 }
@@ -325,7 +325,7 @@ body {
 
 .floating-info {
   position: sticky;
-  top: 5.5rem;
+  top: 160px;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
