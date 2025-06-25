@@ -13,10 +13,17 @@
     <ul class="nav-links">
       <li><a href="#">Info</a></li>
       <li><a href="#">Schedule</a></li>
-      <li><a href="#">Notes</a></li>
+      <li><a href="#" id="mapLink">Map</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
+  <!-- Map Modal -->
+  <div class="modal" id="mapModal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="closeMapModal">&times;</span>
+      <img src="images/map.jpg" alt="Map" class="modal-image">
+    </div>
+  </div>
   <div class="main-layout">
     <aside class="day-numbers">
       <div class="day-number"><span class="weekday-date">Thursday 24th</span></div>
@@ -33,7 +40,7 @@
         <div class="card-details">
           <ul>
             <li>Hot Springs Campground</li>
-            <li>There are 2 campsite loops. Our Sites are located in the loop (sites 37-76).</li>
+            <li>There are 2 campsite loops. Our Sites are located in the loop (<a href="#" class="map-popup-link" data-popup="map">sites 37-76</a>).</li>
           </ul>
         </div>
         <div class="card-summary">
