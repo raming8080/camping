@@ -395,8 +395,6 @@ body {
 /* For future JS enhancements, add styles here */
 
 .floating-info {
-  position: sticky;
-  top: 160px;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
