@@ -183,9 +183,13 @@ body {
   margin-bottom: 0.7rem;
 }
 .card-title {
+  font-family: 'Inter', Arial, sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 1.2rem 0;
+  color: #fa6868;
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
   line-height: 1.2;
   word-break: break-word;
 }
@@ -342,10 +346,10 @@ body {
   }
   .day-number {
     margin: 0 0.7rem 0 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .day-number .weekday-date {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .content-cards {
     gap: 1.2rem;
@@ -355,7 +359,9 @@ body {
     border-radius: 12px;
   }
   .card-title {
-    font-size: 1.1rem;
+    font-size: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
   }
   .card-image {
     max-width: 100%;
@@ -383,7 +389,9 @@ body {
     padding: 0.7rem 0.2rem 0.7rem 0.2rem;
   }
   .card-title {
-    font-size: 1rem;
+    font-size: 2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
   }
   .card-summary {
     font-size: 0.95rem;
@@ -627,7 +635,7 @@ body.dark-mode .card-meta {
   color: #b0b0b0;
 }
 body.dark-mode .card-title {
-  color: #fff;
+  color: #fa6868;
 }
 body.dark-mode .card-details a,
 body.dark-mode .floating-info-content a {
